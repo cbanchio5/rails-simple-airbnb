@@ -1,0 +1,61 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+.container {
+  display:flex;
+  justify-content: space-evenly;
+
+}
+
+.card-body{
+  margin:10px;
+}
+
+.container-all {
+  margin: 10px;
+}
+
+.flat-img {
+  object-fit: cover ;
+  object-position: center;
+  height: 30%;
+
+}
+
+.info-flat {
+
+  background-color: rgba(200, 200, 200, 1);
+
+
+}
+
+.flat-img {
+  z-index: 1;
+
+
+}
+.fin-all {
+  position:relative;
+  top: -450px;
+  z-index: 6;
+}
+
+.but-actions {
+  display:flex;
+  justify-content: space-evenly;
+  font-size: 15px;
+}
+
+.but-text {
+  font-size: 10px;
+}

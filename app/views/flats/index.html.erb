@@ -1,0 +1,36 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Airban</span>
+    <%= link_to "Add a flat", new_flat_path, class: "btn btn-outline-primary"%>
+  </div>
+</nav>
+<div class="container-all">
+<h2>All of our flats (<%= @flats.length  %>)</h2>
+
+
+<div class="container">
+
+
+<% @flats.each do |flat| %>
+
+<div class="card flat-card shadow-sm p-3 mb-5 bg-white rounded" style="width: 18rem;">
+
+  <div class="card-body">
+    <h5 class="card-title"><%= flat.name  %></h5>
+    <p class="card-text"><%= flat.address  %></p>
+    <p><i class="fa-solid fa-user-group"></i> <%= flat.number_of_guests  %>  <i class="fa-solid fa-euro-sign"></i> <%= flat.price_per_night  %> </p>
+
+  </div>
+  <div class="card-footer text-muted but-actions">
+  <%= link_to "More info", flat_path(flat), class: "btn btn-outline-secondary but-text"%>
+  <%= link_to "Edit", edit_flat_path(flat), class: "btn btn-outline-warning but-text"%>
+  <%= link_to "Delete", flat_path(flat),
+  class: "btn btn-outline-danger but-text",
+  method: :delete,
+   data: { confirm: "Are you sure?" }%>
+  </div>
+</div>
+<% end %>
+
+</div>
+</div>
